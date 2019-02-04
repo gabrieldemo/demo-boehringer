@@ -9,4 +9,5 @@ import java.util.List;
 @Repository
 public interface MascotaRepository extends JpaRepository<Mascota, Long> {
     List<Mascota> findByClienteId(Long clienteId);
+    public Mascota findByNombre(String name);
 }

@@ -12,6 +12,12 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
 @Table(name = "mascotas")
 public class Mascota extends AuditModel {
+	
+	public Mascota(String nombre, String tipo){
+		this.nombre = nombre;
+		this.tipo = tipo;
+	}
+	
     @Id
     @GeneratedValue(generator = "mascota_generator")
     @SequenceGenerator(

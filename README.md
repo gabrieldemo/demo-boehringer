@@ -1,2 +1,1 @@
-# demo-boehringer
-demo-boehringer
+## DEMO - Boehringer

@@ -27,7 +27,11 @@ public class Cliente extends AuditModel {
     @Column(columnDefinition = "text")
     private String telefono;
 
-
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "veterinaria_id", nullable = true)
+    @OnDelete(action = OnDeleteAction.NO_ACTION)
+    @JsonIgnore
+    private Veterinaria veterinaria; 
 
 	public Long getId() {
 		return id;
@@ -51,6 +55,14 @@ public class Cliente extends AuditModel {
 
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
+	}
+
+	public Veterinaria getVeterinaria() {
+		return veterinaria;
+	}
+
+	public void setVeterinaria(Veterinaria veterinaria) {
+		this.veterinaria = veterinaria;
 	}
   
 }
