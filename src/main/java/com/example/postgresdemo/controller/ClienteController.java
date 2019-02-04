@@ -40,7 +40,7 @@ public class ClienteController {
         return clienteRepository.findByVeterinariaId(veterinariaId);
     }  
     
-    @GetMapping("/clientes/{nombre}")
+    @GetMapping("/clientes/{nombre}/nombre")
     public List<Cliente> getClientesByNombre(@PathVariable String nombre) {
         return clienteRepository.findByNombre(nombre);
     }      
