@@ -11,4 +11,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ClienteRepository extends JpaRepository<Cliente, Long> {
     List<Cliente> findByVeterinariaId(Long veterinariaId);
+    List<Cliente> findByNombre(String nombre);    
 }

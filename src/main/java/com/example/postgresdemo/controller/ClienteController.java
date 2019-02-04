@@ -38,7 +38,12 @@ public class ClienteController {
     @GetMapping("/clientes/{veterinariaId}")
     public List<Cliente> getClientesByVeterinariId(@PathVariable Long veterinariaId) {
         return clienteRepository.findByVeterinariaId(veterinariaId);
-    }    
+    }  
+    
+    @GetMapping("/clientes/{nombre}")
+    public List<Cliente> getClientesByNombre(@PathVariable String nombre) {
+        return clienteRepository.findByNombre(nombre);
+    }      
 
     @PostMapping("/clientes/{veterinariaId}")
     public Cliente createCliente(@PathVariable Long veterinariaId,
